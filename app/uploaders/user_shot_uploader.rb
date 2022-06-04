@@ -33,13 +33,13 @@ class UserShotUploader < CarrierWave::Uploader::Base
     process resize_to_fit: [800, 600]
   end
   version :thumb do
-    process resize_to_fit: [400, 300]
+    process resize_to_fit: [500, 400]
   end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_allowlist
-    %w(jpg jpeg gif png)
+    %w(jpg jpeg gif png webp)
   end
 
   # Override the filename of the uploaded files:
